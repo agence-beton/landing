@@ -1,0 +1,184 @@
+/* ======= RESET ======= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-block-size: 100vh;
+  line-height: 1.5;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-end: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+:where(img, picture, figure, video, canvas, svg, use) {
+  display: block;
+  max-inline-size: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:is([type="checkbox"], [type="radio"]),
+select,
+label,
+button {
+  cursor: pointer;
+}
+
+/* ======= /RESET ======= */
+
+/* ======= UTILS ======= */
+.visually-hidden,
+.visually-hidden-focusable:not(:focus, :focus-within) {
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(caption):not(:focus, :focus-within) {
+  position: absolute !important;
+}
+
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus, :focus-within) * {
+  overflow: hidden !important;
+}
+
+/* ======= /UTILS ======= */
+
+/* ======= TYPO ======= */
+
+/* ======= /TYPO ======= */
+
+/* ======= VARIABLES ======= */
+:root {
+  --primary-color: #02AD95;
+  --secondary-color: #FFCB00;
+  --font-color: #000;
+
+  --font-primary: 'Inter', Arial, sans-serif;
+  --font-secondary: "Comis Sans", sans-serif;
+}
+
+/* ======= /VARIABLES ======= */
+
+/* ======= FONTS ======= */
+body {
+  font-family: var(--font-primary);
+  color: var(--font-color);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-secondary);
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* ======= /FONTS ======= */
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--site-padding-block);
+  background-color: var(--primary-color);
+}
+
+/* ======= /HEADER ======= */
+
+main {
+  background-color: var(--primary-color);
+}
+
+/* ======= FOOTER ======= */
+footer {
+ background-color: var(--secondary-color);
+}
+
+footer ul li::before {
+  content: none
+}
+
+/* ======= /FOOTER ======= */
