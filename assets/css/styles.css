@@ -124,28 +124,10 @@ button {
 }
 
 @font-face {
-  font-family: 'Optician Sans';
-  src: url('../fonts/subset-OpticianSans-Regular.woff2') format('woff2'),
-    url('../fonts/subset-OpticianSans-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Silverspoon TRIAL';
-  src: url('../fonts/subset-SilverspoonTRIAL-Bold.woff2') format('woff2'),
-    url('../fonts/subset-SilverspoonTRIAL-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Halisa';
   src: url('../fonts/subset-Halisa-Black.woff2') format('woff2'),
     url('../fonts/subset-Halisa-Black.woff') format('woff');
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -165,24 +147,6 @@ button {
     url('../fonts/subset-Silverspoon-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Halisa Condensed';
-  src: url('../fonts/subset-Halisa-CondensedBlack.woff2') format('woff2'),
-    url('../fonts/subset-Halisa-CondensedBlack.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Halisa';
-  src: url('../fonts/subset-Halisa-Italic.woff2') format('woff2'),
-    url('../fonts/subset-Halisa-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
   font-display: swap;
 }
 
