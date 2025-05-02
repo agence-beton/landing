@@ -114,71 +114,428 @@ button {
 /* ======= /UTILS ======= */
 
 /* ======= TYPO ======= */
+@font-face {
+  font-family: 'Halisa';
+  src: url('../fonts/subset-Halisa-Regular.woff2') format('woff2'),
+    url('../fonts/subset-Halisa-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Optician Sans';
+  src: url('../fonts/subset-OpticianSans-Regular.woff2') format('woff2'),
+    url('../fonts/subset-OpticianSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Silverspoon TRIAL';
+  src: url('../fonts/subset-SilverspoonTRIAL-Bold.woff2') format('woff2'),
+    url('../fonts/subset-SilverspoonTRIAL-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halisa';
+  src: url('../fonts/subset-Halisa-Black.woff2') format('woff2'),
+    url('../fonts/subset-Halisa-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Abridge';
+  src: url('../fonts/subset-Abridge-Regular.woff2') format('woff2'),
+    url('../fonts/subset-Abridge-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Silverspoon';
+  src: url('../fonts/subset-Silverspoon-Bold.woff2') format('woff2'),
+    url('../fonts/subset-Silverspoon-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halisa Condensed';
+  src: url('../fonts/subset-Halisa-CondensedBlack.woff2') format('woff2'),
+    url('../fonts/subset-Halisa-CondensedBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halisa';
+  src: url('../fonts/subset-Halisa-Italic.woff2') format('woff2'),
+    url('../fonts/subset-Halisa-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Abridge';
+  src: url('../fonts/subset-Abridge-Bold.woff2') format('woff2'),
+    url('../fonts/subset-Abridge-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ======= /TYPO ======= */
 
 /* ======= VARIABLES ======= */
 :root {
-  --primary-color: #02AD95;
-  --secondary-color: #FFCB00;
-  --font-color: #000;
+  --primary-color: rgba(255, 203, 0, 0.15);
+  --primary-color-full: rgba(255, 203, 0, 1);
+  --secondary-color: rgba(0, 173, 149, 1);
+  --font-color: var(--secondary-color);
 
-  --font-primary: 'Inter', Arial, sans-serif;
-  --font-secondary: "Comis Sans", sans-serif;
+  --font-primary: "Halisa", sans-serif;
+
+  --font-size-normal: 1.75rem;
+  --font-size-small: 1.375rem;
+
+  --site-padding-inline: 2rem;
 }
 
 /* ======= /VARIABLES ======= */
 
-/* ======= FONTS ======= */
+
+/* ======= DEFAULT ======= */
 body {
   font-family: var(--font-primary);
   color: var(--font-color);
+  font-size: var(--font-size-normal);
+  background-color: var(--primary-color);
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-family: var(--font-secondary);
+main {
+  --main-columns: var(--site-padding-inline) 1fr 1fr minmax(auto, 70.625rem) 1fr 1fr var(--site-padding-inline);
+  display: grid;
+  grid-template-columns: var(--main-columns);
+  justify-content: center;
+  padding-block-end: 16.25rem;
+
+  background: url(../img/logo-beton-bottom.png) bottom center no-repeat;
 }
 
-h2,
-h3 {
+main>section {
+  grid-column: 4 / -4;
+  min-width: 0;
+}
+
+h2 {
+  margin-bottom: 7.5rem;
+  font-family: "Silverspoon", serif;
+  font-size: 4.25rem;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
-/* ======= /FONTS ======= */
+h2 span {
+  display: block;
+  font-family: "Abridge", serif;
+  font-weight: 400;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-small);
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+ul {
+  padding-left: 0;
+  font-size: var(--font-size-small);
+  list-style-type: "";
+}
+
+li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+li::before {
+  content: '';
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: var(--secondary-color);
+}
+
+em {
+  font-weight: 800;
+  font-style: normal;
+}
+
+.btn {
+  padding: 1rem 1.25rem;
+  color: var(--secondary-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 2rem;
+}
+
+/* ======= /DEFAULT ======= */
 
 /* ======= HEADER ======= */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: var(--site-padding-block);
-  background-color: var(--primary-color);
+  padding-block: 16rem 8.375rem;
+  background: url(../img/logo-beton-top.png) top center no-repeat;
+}
+
+header h1 {
+  margin-inline: auto;
 }
 
 /* ======= /HEADER ======= */
 
-main {
-  background-color: var(--primary-color);
-}
-
 /* ======= FOOTER ======= */
 footer {
- background-color: var(--secondary-color);
+  --main-columns: var(--site-padding-inline) 1fr 1fr minmax(auto, 70.625rem) 1fr 1fr var(--site-padding-inline);
+  display: grid;
+  grid-template-columns: var(--main-columns);
+  justify-content: center;
+  padding-block: 7rem 2.5rem;
+  color: #000;
+  font-size: var(--font-size-small);
+  background-color: var(--secondary-color);
+}
+
+footer>div {
+  grid-column: 4 / -4;
+  min-width: 0;
+}
+
+.footer__top,
+.footer__middle,
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__top {
+  align-items: flex-end;
+  margin-block-end: 7rem;
+}
+
+.footer__middle {
+  margin-block: 5.5rem 2.75rem;
+}
+
+.footer__middle>div:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer__bottom {
+  align-items: center;
+}
+
+.footer__bottom ul {
+  display: flex;
+}
+
+footer h2 {
+  margin-bottom: 0;
+}
+
+footer h3 {
+  text-transform: uppercase;
 }
 
 footer ul li::before {
   content: none
 }
 
+footer h2,
+footer a {
+  color: inherit
+}
+
+footer .btn {
+  margin-block-start: 3rem;
+}
+
 /* ======= /FOOTER ======= */
+
+section {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 54.75rem);
+}
+
+section+section {
+  margin-block-start: 7.5rem;
+}
+
+section>h2 {
+  grid-column: 1 / -1;
+}
+
+section>div {
+  grid-column: 2 / -2;
+}
+
+section p:first-of-type {
+  padding-block: .75rem 4rem;
+  border-block: 2px solid var(--secondary-color);
+}
+
+section p:last-of-type {
+  display: grid;
+  grid-template-columns: minmax(3.625rem, auto) minmax(auto, 34.75rem);
+  gap: 2rem;
+  margin-block-start: 1.125rem;
+}
+
+section p:last-of-type::before {
+  --plane-size: 4.25rem;
+  content: "";
+  display: block;
+  width: var(--plane-size);
+  height: var(--plane-size);
+  background: url(../img/avion.png) center center no-repeat;
+}
+
+.prestas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.prestas>div>div:not(:first-child) {
+  margin-block-start: 3rem;
+}
+
+/* BREVO */
+@font-face {
+  font-display: block;
+  font-family: Roboto;
+  src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+    url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: Roboto;
+  font-weight: 600;
+  src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+    url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: Roboto;
+  font-weight: 700;
+  src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+    url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+}
+
+#sib-container input:-ms-input-placeholder {
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container input::placeholder {
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container textarea::placeholder {
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container a {
+  text-decoration: underline;
+  color: #2bb2fc;
+}
+
+.sib-form-block {
+  padding: 0;
+}
+
+#sib-container {
+  padding: 0;
+  background: none;
+}
+
+.sib-form {
+  font-family: "Halisa", sans-serif;
+  font-weight: normal;
+  font-size: var(--font-size-normal);
+}
+
+.sib-form .entry__field {
+  padding: .5rem;
+  background: none;
+}
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder,
+input::placeholder {
+  font-weight: normal;
+  color: #000 !important;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+.sib-form .entry__field {
+  width: calc(100% - 4rem);
+  border-radius: 0;
+  border: none
+}
+
+.sib-form .entry__field:focus-within,
+.sib-form-block__button:focus-visible {
+  box-shadow: 0 0 0 2px var(--primary-color-full);
+}
+
+.sib-form-block__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: none;
+}
+
+.form__label-row {
+  position: relative;
+  border: 1px solid #000;
+}
+
+.entry__error {
+  padding: 1rem;
+}
+
+/* /BREVO */
