@@ -417,24 +417,6 @@ section p:last-of-type::before {
     url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
 }
 
-#sib-container input:-ms-input-placeholder {
-  text-align: left;
-  font-family: Helvetica, sans-serif;
-  color: #c0ccda;
-}
-
-#sib-container input::placeholder {
-  text-align: left;
-  font-family: Helvetica, sans-serif;
-  color: #c0ccda;
-}
-
-#sib-container textarea::placeholder {
-  text-align: left;
-  font-family: Helvetica, sans-serif;
-  color: #c0ccda;
-}
-
 #sib-container a {
   text-decoration: underline;
   color: #2bb2fc;
@@ -460,11 +442,7 @@ section p:last-of-type::before {
   background: none;
 }
 
-input::-webkit-input-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder,
-input:-moz-placeholder,
-input::placeholder {
+#EMAIL::placeholder {
   font-weight: normal;
   color: #000 !important;
 }
