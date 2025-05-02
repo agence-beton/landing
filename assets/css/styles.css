@@ -170,8 +170,10 @@ button {
 
   --font-primary: "Halisa", sans-serif;
 
-  --font-size-normal: 1.75rem;
-  --font-size-small: 1.375rem;
+  --font-size-normal: clamp(0.9375rem, 0.58rem + 1.3vw, 1.75rem);
+  /*440px: 15px -> 1440px: 28px*/
+  --font-size-small: clamp(0.9375rem, 0.745rem + 0.7vw, 1.375rem);
+  /*440px: 15px -> 1440px: 22px*/
 
   --site-padding-inline: 2rem;
 }
@@ -203,9 +205,10 @@ main>section {
 }
 
 h2 {
-  margin-bottom: 7.5rem;
+  margin-block-end: 7.5rem;
   font-family: "Silverspoon", serif;
-  font-size: 4.25rem;
+  font-size: clamp(1.75rem, 0.6775rem + 3.9vw, 4.1875rem);
+  /*440px: 28px -> 1440px: 67px*/
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -432,14 +435,18 @@ section p:last-of-type::before {
 }
 
 .sib-form {
+  padding: 0;
   font-family: "Halisa", sans-serif;
   font-weight: normal;
   font-size: var(--font-size-normal);
 }
 
 .sib-form .entry__field {
+  width: calc(100% - 3rem);
   padding: .5rem;
   background: none;
+  border-radius: 0;
+  border: none
 }
 
 #EMAIL::placeholder {
@@ -449,12 +456,6 @@ section p:last-of-type::before {
 
 ::-moz-placeholder {
   opacity: 1;
-}
-
-.sib-form .entry__field {
-  width: calc(100% - 4rem);
-  border-radius: 0;
-  border: none
 }
 
 .sib-form .entry__field:focus-within,
@@ -481,3 +482,83 @@ section p:last-of-type::before {
 }
 
 /* /BREVO */
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 58.75rem) {
+  h2 {
+    margin-block-end: 2.75rem;
+  }
+
+  li {
+    gap: .5rem
+  }
+
+  li::before {
+    width: 1.625rem;
+    height: 2px;
+  }
+
+  header {
+    padding-block: 6rem 2.875rem;
+    background-size: 80%;
+  }
+
+  header img {
+    width: 11.25rem;
+  }
+
+  main {
+    padding-block-end: 6.5rem;
+    background-size: 80%;
+  }
+
+  section+section {
+    margin-block-start: 3.25rem;
+  }
+
+  section p:first-of-type {
+    padding-block-end: 2rem;
+  }
+
+  section p:last-of-type::before {
+    --plane-size: 3.625rem;
+  }
+
+  .prestas {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding-block-start: 4rem;
+  }
+
+  .footer__top,
+  .footer__middle {
+    flex-direction: column;
+  }
+
+  .footer__top {
+    align-items: flex-start;
+    margin-block-end: 2.75rem;
+  }
+
+  .footer__middle {
+    margin-block: 2rem;
+  }
+
+  .footer__middle > div + div {
+    margin-block-start: 3rem;
+  }
+
+  footer h2 {
+    margin-block-end: 1.25rem;
+  }
+
+  .sib-form .entry__field {
+    padding-block: 0;
+  }
+}
+
+/* /RESPONSIVE */
