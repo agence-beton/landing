@@ -304,8 +304,13 @@ footer>div {
 }
 
 .footer__top {
+  gap: 2rem;
   align-items: flex-end;
   margin-block-end: 7rem;
+}
+
+.footer__top > div {
+  max-width: 19.75rem;
 }
 
 .footer__middle {
@@ -323,9 +328,11 @@ footer>div {
 
 .footer__bottom ul {
   display: flex;
+  gap: 2rem;
 }
 
 footer h2 {
+  flex-shrink: 0;
   margin-bottom: 0;
 }
 
@@ -384,6 +391,7 @@ section p:last-of-type::before {
   width: var(--plane-size);
   height: var(--plane-size);
   background: url(../img/avion.svg) center center no-repeat;
+  background-size: cover;
 }
 
 .prestas {
@@ -435,6 +443,7 @@ section p:last-of-type::before {
 }
 
 .sib-form {
+  margin-bottom: .75rem;
   padding: 0;
   font-family: "Halisa", sans-serif;
   font-weight: normal;
@@ -457,10 +466,17 @@ section p:last-of-type::before {
 ::-moz-placeholder {
   opacity: 1;
 }
+.sib-form .entry__field {
+  margin: 0;
+}
 
 .sib-form .entry__field:focus-within,
-.sib-form-block__button:focus-visible {
-  box-shadow: 0 0 0 2px var(--primary-color-full);
+.sib-form .entry__field:has(+ .sib-form-block__button:focus-within),
+.sib-form .entry__field:focus-within + .sib-form-block__button,
+.sib-form-block__button:focus-within {
+  box-shadow: none;
+  background: #000;
+  color: var(--secondary-color);
 }
 
 .sib-form-block__button {
@@ -470,6 +486,15 @@ section p:last-of-type::before {
   bottom: 0;
   margin: auto;
   background: none;
+}
+
+.sib-form .entry__field:focus-within + .sib-form-block__button svg path,
+.sib-form-block__button:focus-within svg path {
+  stroke: var(--secondary-color);
+}
+
+.sib-form-block__button:focus-visible {
+  outline-style: dashed;
 }
 
 .form__label-row {
@@ -523,11 +548,16 @@ section p:last-of-type::before {
   }
 
   section p:last-of-type::before {
-    --plane-size: 3.625rem;
+    --plane-size: 2.125rem;
   }
 
   .prestas {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .prestas>div>div:not(:first-child) {
+    margin-block-start: 1.25rem;
   }
 
   footer {
@@ -548,12 +578,16 @@ section p:last-of-type::before {
     margin-block: 2rem;
   }
 
-  .footer__middle > div + div {
+  .footer__middle>div+div {
     margin-block-start: 3rem;
   }
 
+  .footer__bottom ul {
+    gap: 1rem
+  }
+
   .footer__bottom img {
-    width: 4.25rem
+    width: 2.125rem
   }
 
   footer h2 {
