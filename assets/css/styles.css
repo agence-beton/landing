@@ -196,7 +196,7 @@ main {
   justify-content: center;
   padding-block-end: 16.25rem;
 
-  background: url(../img/logo-beton-bottom.png) bottom center no-repeat;
+  background: url(../img/logo-beton-bottom.svg) bottom -1px center no-repeat;
 }
 
 main>section {
@@ -270,7 +270,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-block: 16rem 8.375rem;
-  background: url(../img/logo-beton-top.png) top center no-repeat;
+  background: url(../img/logo-beton-top.svg) top center no-repeat;
 }
 
 header h1 {
@@ -383,7 +383,7 @@ section p:last-of-type::before {
   display: block;
   width: var(--plane-size);
   height: var(--plane-size);
-  background: url(../img/avion.png) center center no-repeat;
+  background: url(../img/avion.svg) center center no-repeat;
 }
 
 .prestas {
