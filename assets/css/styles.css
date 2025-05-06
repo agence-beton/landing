@@ -520,6 +520,9 @@ section p:last-of-type::before {
 /* /BREVO */
 
 /* PAGE */
+.page p {
+  font-size: var(--font-size-small);
+}
 .page h1 {
   margin-block-end: 7.5rem;
   font-family: "Silverspoon", serif;
@@ -568,8 +571,7 @@ section p:last-of-type::before {
   margin-block-end: 0;
   font-family: "Abridge", serif;
   font-size: clamp(1.5rem, 0.51rem + 3.6vw, 3.75rem);
-  ;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
 }
 
