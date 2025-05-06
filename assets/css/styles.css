@@ -327,7 +327,7 @@ footer>div {
 }
 
 .footer__middle>div:nth-child(2) img {
-  max-width: 17.375rem;
+  width: 17.375rem;
 }
 
 .footer__bottom {
@@ -659,7 +659,7 @@ section p:last-of-type::before {
     margin-block-start: 3rem;
   }
 
-  .footer__middle > div:nth-child(2) img {
+  .footer__middle>div:nth-child(2) img {
     max-width: 12rem;
   }
 
