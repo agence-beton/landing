@@ -203,7 +203,7 @@ main>section {
   min-width: 0;
 }
 
-h2, 
+h2,
 .page footer h2 {
   margin-block-end: 7.5rem;
   font-family: "Silverspoon", serif;
@@ -523,6 +523,7 @@ section p:last-of-type::before {
 .page p {
   font-size: var(--font-size-small);
 }
+
 .page h1 {
   margin-block-end: 7.5rem;
   font-family: "Silverspoon", serif;
@@ -530,6 +531,10 @@ section p:last-of-type::before {
   /*440px: 28px -> 1440px: 67px*/
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.page li {
+  display: block;
 }
 
 .page li::before {
