@@ -140,7 +140,7 @@ button {
   --font-primary: "akrobatsemibold", sans-serif;
   --font-secondary: "Halisa-Condensed", sans-serif;
 
-  --font-size-large: clamp(8.375rem, -3.5197rem + 24.7807vw, 22.5rem);
+  --font-size-large: clamp(5rem, -5rem + 20.8333vw, 16.875rem);
   /*768: 101px -> 1680px: 270px*/
   --font-size-normal: clamp(1.3125rem, 0.3125rem + 2.0833vw, 2.5rem);
   /*768: 21px -> 1680px: 40px*/
@@ -155,6 +155,9 @@ button {
 
 /* ======= DEFAULT ======= */
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: var(--font-primary);
   color: var(--font-color);
   font-size: var(--font-size-small);
