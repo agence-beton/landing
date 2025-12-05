@@ -140,7 +140,7 @@ button {
   --font-primary: "akrobatsemibold", sans-serif;
   --font-secondary: "Halisa-Condensed", sans-serif;
 
-  --font-size-large: clamp(5rem, -5rem + 20.8333vw, 16.875rem);
+  --font-size-large: clamp(6.25rem, -2.6974rem + 18.6404vw, 16.875rem);
   /*768: 101px -> 1680px: 270px*/
   --font-size-normal: clamp(1.3125rem, 0.3125rem + 2.0833vw, 2.5rem);
   /*768: 21px -> 1680px: 40px*/
