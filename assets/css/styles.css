@@ -405,6 +405,10 @@ footer nav a img {
 
 /* RESPONSIVE */
 @media screen and (max-width: 64rem) {
+
+  h2 {
+    line-height: 0.9;
+  }
   .content {
     display: flex;
     flex-direction: column;
