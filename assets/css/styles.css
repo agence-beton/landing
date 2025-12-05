@@ -418,6 +418,10 @@ footer nav a img {
     order: 3
   }
 
+  .content p {
+    margin-block: 2rem;
+  }
+
   .dalle {
     justify-content: center;
   }
@@ -431,7 +435,7 @@ footer nav a img {
   footer>div {
     flex-direction: column;
     align-items: initial;
-    gap: 4rem
+    gap: 2rem
   }
 
   footer nav ul {
