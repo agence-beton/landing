@@ -138,7 +138,7 @@ button {
   --font-color: black;
 
   --font-primary: "akrobatsemibold", sans-serif;
-  --font-secondary: "Halisa Condensed", sans-serif;
+  --font-secondary: "Halisa-Condensed", sans-serif;
 
   --font-size-large: clamp(8.375rem, -3.5197rem + 24.7807vw, 22.5rem);
   /*768: 101px -> 1680px: 270px*/
