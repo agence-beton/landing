@@ -319,8 +319,8 @@ footer nav a img {
 
 .sib-form {
   padding: 0;
-  font-family: "Halisa", sans-serif;
-  font-weight: normal;
+  font-family: var(--font-primary);
+  font-weight: bold;
   font-size: var(--font-size-small);
 }
 
