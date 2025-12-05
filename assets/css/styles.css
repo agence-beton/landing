@@ -162,17 +162,18 @@ body {
 }
 
 main {
-  --main-columns: var(--site-padding-inline) 1fr 1fr minmax(auto, 100rem) 1fr 1fr var(--site-padding-inline);
+  /* --main-columns: var(--site-padding-inline) 1fr 1fr minmax(auto, 100rem) 1fr 1fr var(--site-padding-inline);
   display: grid;
   grid-template-columns: var(--main-columns);
-  justify-content: center;
+  justify-content: center; */
+  padding-inline: var(--site-padding-inline);
   padding-block-start: 2rem;
 }
 
-main>section {
+/* main>section {
   grid-column: 4 / -4;
   min-width: 0;
-}
+} */
 
 h2 {
   font-family: var(--font-secondary);
