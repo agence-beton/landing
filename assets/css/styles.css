@@ -418,6 +418,10 @@ footer nav a img {
     order: 3
   }
 
+  .content h1 img {
+    max-width: 8rem;
+  }
+
   .content p {
     margin-block: 2rem;
   }
